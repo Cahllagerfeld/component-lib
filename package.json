@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "pnpm --recursive --parallel dev",
     "build": "pnpm --recursive --parallel build"
   },
   "keywords": [],
