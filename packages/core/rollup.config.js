@@ -4,6 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import external from "rollup-plugin-peer-deps-external";
 import { dts } from "rollup-plugin-dts";
 
+/** @type {import('rollup').RollupOptions} */
 export default [
   {
     input: "src/index.ts",
@@ -12,7 +13,6 @@ export default [
         file: "dist/cjs/index.js",
         format: "cjs",
         sourcemap: true,
-        name: "react-lib",
       },
       {
         file: "dist/esm/index.js",

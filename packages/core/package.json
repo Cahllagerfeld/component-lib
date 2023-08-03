@@ -21,5 +21,8 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.6.1",
     "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }
