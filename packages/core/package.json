@@ -10,7 +10,7 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts src/tailwind-plugin.ts src/helper/util.ts --treeshake --format esm,cjs --minify --dts"
+    "build": "tsup"
   },
   "keywords": [],
   "author": "",
