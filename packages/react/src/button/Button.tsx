@@ -23,6 +23,7 @@ const buttonVariants = cva(
       },
     },
     compoundVariants: [
+      // Primary
       {
         emphasis: "bold",
         variant: "primary",
@@ -41,6 +42,7 @@ const buttonVariants = cva(
         class:
           "text-primary-600 hover:bg-primary-50 active:bg-primary-100 active:ring-4 active:ring-[#E4D8FD] disabled:text-primary-100",
       },
+      // Secondary
       {
         emphasis: "bold",
         variant: "secondary",
@@ -48,10 +50,35 @@ const buttonVariants = cva(
           "bg-neutral-200 text-theme-text-primary hover:bg-neutral-300 focus-visible:outline-none active:bg-neutral-400 focus:ring-4 focus:ring-[#E5E7EB] disabled:text-neutral-100",
       },
       {
+        emphasis: "subtle",
+        variant: "secondary",
+        class:
+          "border border-neutral-300 text-neutral-900 hover:bg-neutral-100 active:border-neutral-400 active:bg-neutral-300 active:ring-4 active:ring-neutral-100 disabled:border-neutral-300 disabled:text-neutral-300",
+      },
+      {
+        emphasis: "minimal",
+        variant: "secondary",
+        class:
+          "text-primary-900 hover:bg-neutral-200 active:bg-neutral-300 active:ring-4 active:ring-neutral-100 disabled:text-neutral-300",
+      },
+      // Danger
+      {
         emphasis: "bold",
         variant: "danger",
         class:
-          "bg-error-600 text-white hover:bg-error-500 focus:ring-error-50 focus:bg-error-600 focus-visible:outline-none focus:ring-4 disabled:bg-error-50",
+          "bg-error-600 text-white hover:bg-error-500 focus:ring-error-50 focus:bg-error-600 focus-visible:outline-none focus:ring-4 disabled:bg-error-100",
+      },
+      {
+        emphasis: "subtle",
+        variant: "danger",
+        class:
+          "border border-error-600 text-error-700 hover:bg-error-50 active:bg-error-100 active:ring-4 active:ring-error-50 disabled:border-error-100 disabled:text-error-100",
+      },
+      {
+        emphasis: "minimal",
+        variant: "danger",
+        class:
+          "text-error-700 hover:bg-error-50 active:bg-error-100 active:ring-4 active:ring-error-50 disabled:text-error-100",
       },
     ],
     defaultVariants: {
