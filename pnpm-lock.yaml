@@ -29,6 +29,9 @@ importers:
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
+      core:
+        specifier: workspace:*
+        version: link:../core
       tailwind-merge:
         specifier: ^1.14.0
         version: 1.14.0

@@ -2,7 +2,7 @@
 
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "./button";
+import { default as Button } from "./Button";
 
 //👇 Instead of importing ListItem, we import the stories
 
@@ -18,9 +18,22 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const OneItem: Story = {
+export const Primary: Story = {
   name: "Primary",
   args: {
     children: "Hello World",
+    variant: "primary",
+    size: "lg",
+    disabled: false,
+  },
+};
+
+export const Secondary: Story = {
+  name: "Secondary",
+  args: {
+    children: "Hello World",
+    variant: "secondary",
+    size: "lg",
+    disabled: false,
   },
 };

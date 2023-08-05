@@ -8,12 +8,13 @@
   ],
   "scripts": {
     "build": "tsup",
-    "storybook": "storybook dev -p 6006 -s ./src",
+    "dev": "storybook dev -p 6006 -s ./src",
     "build-storybook": "storybook build"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "core": "workspace:*",
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
