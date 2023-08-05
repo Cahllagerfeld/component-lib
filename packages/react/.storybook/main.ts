@@ -1,4 +1,4 @@
-/** @type { import('@storybook/react-webpack5').StorybookConfig } */
+/** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
@@ -6,9 +6,14 @@ const config = {
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
+    "@storybook/addon-a11y",
+    {
+      name: "@storybook/addon-styling",
+      options: {},
+    },
   ],
   framework: {
-    name: "@storybook/react-webpack5",
+    name: "@storybook/react-vite",
     options: {},
   },
   docs: {

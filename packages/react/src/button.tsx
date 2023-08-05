@@ -13,7 +13,10 @@ export function Button({
   }
   return (
     <button
-      className={twMerge("bg-green-100", className)}
+      className={twMerge(
+        "bg-green-500 rounded-lg py-1 px-2 hover:bg-green-400 transition-all duration-200",
+        className
+      )}
       onClick={clickHandler}
     >
       {children}
