@@ -1,16 +1,8 @@
-// List.stories.ts|tsx
-
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { default as Button } from "./Button";
-
-//👇 Instead of importing ListItem, we import the stories
+import { Button } from "./Button";
 
 const meta: Meta<typeof Button> = {
-  /* 👇 The title prop is optional.
-   * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
-   * to learn how to generate automatic titles
-   */
   title: "Button",
   component: Button,
 };
@@ -18,11 +10,34 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
-  name: "Primary",
+export const PrimaryBold: Story = {
+  name: "Primary Bold",
   args: {
     children: "Hello World",
     variant: "primary",
+    emphasis: "bold",
+    size: "lg",
+    disabled: false,
+  },
+};
+
+export const PrimarySubtle: Story = {
+  name: "Primary Subtle",
+  args: {
+    children: "Hello World",
+    variant: "primary",
+    emphasis: "subtle",
+    size: "lg",
+    disabled: false,
+  },
+};
+
+export const PrimaryMinimal: Story = {
+  name: "Primary Minimal",
+  args: {
+    children: "Hello World",
+    variant: "primary",
+    emphasis: "minimal",
     size: "lg",
     disabled: false,
   },
@@ -33,6 +48,7 @@ export const Secondary: Story = {
   args: {
     children: "Hello World",
     variant: "secondary",
+    emphasis: "bold",
     size: "lg",
     disabled: false,
   },
