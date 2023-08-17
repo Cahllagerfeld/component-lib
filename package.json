@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "pnpm --recursive --parallel dev",
-		"build": "pnpm --recursive --parallel build",
+		"build": "pnpm --recursive --parallel build && npm run fix:types",
+		"fix:types": "node scripts/fix-type-defs.js",
 		"prepare": "husky install",
 		"format": "prettier -w ."
 	},
@@ -16,7 +17,8 @@
 		"husky": "^8.0.0",
 		"lint-staged": "^13.2.3",
 		"prettier": "^3.0.1",
-		"prettier-plugin-tailwindcss": "^0.4.1"
+		"prettier-plugin-tailwindcss": "^0.4.1",
+		"replace-in-files": "^3.0.0"
 	},
 	"lint-staged": {
 		"*.{css,js,md,ts,jsx,tsx,ts}": "prettier --write"
