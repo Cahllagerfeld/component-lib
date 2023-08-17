@@ -1,6 +1,7 @@
 import { type VariantProps, cva } from "class-variance-authority";
 import { ButtonHTMLAttributes } from "react";
 import { cn } from "../lib/classnames";
+import React from "react";
 
 const buttonVariants = cva(
 	"transition-all duration-200 flex gap-1 items-center font-semibold disabled:pointer-events-none",
