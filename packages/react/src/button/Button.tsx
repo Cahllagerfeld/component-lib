@@ -4,7 +4,7 @@ import { cn } from "../lib/classnames";
 import React from "react";
 
 const buttonVariants = cva(
-	"transition-all duration-200 flex gap-1 items-center font-semibold disabled:pointer-events-none",
+	"transition-all group duration-200 flex gap-1 items-center font-semibold disabled:pointer-events-none",
 	{
 		variants: {
 			emphasis: {
@@ -48,7 +48,7 @@ const buttonVariants = cva(
 				emphasis: "bold",
 				variant: "secondary",
 				class:
-					"bg-neutral-200 text-theme-text-primary hover:bg-neutral-300 focus-visible:outline-none active:bg-neutral-400 focus:ring-4 focus:ring-[#E5E7EB] disabled:text-neutral-100"
+					"bg-neutral-200 text-theme-text-primary hover:bg-neutral-300 focus-visible:outline-none active:bg-neutral-400 focus:ring-4 focus:ring-[#E5E7EB] disabled:text-neutral-300"
 			},
 			{
 				emphasis: "subtle",
@@ -90,12 +90,12 @@ const buttonVariants = cva(
 	}
 );
 
-const iconVariants = cva("w-5 h-5", {
+const iconVariants = cva("w-5 h-5 transition-all duration-200", {
 	variants: {
 		variant: {
 			primary: "stroke-white",
-			secondary: "stroke-theme-text-primary disabled:neutral-100",
-			danger: "stroke-white "
+			secondary: "stroke-theme-text-primary group-disabled:stroke-neutral-300",
+			danger: "stroke-white"
 		}
 	}
 });
