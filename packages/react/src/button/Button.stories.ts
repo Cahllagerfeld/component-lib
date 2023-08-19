@@ -115,11 +115,25 @@ export const DangerMinimal: Story = {
 	}
 };
 export const IconButton: Story = {
-	name: "Icon Button",
+	name: "Primary Icon Button",
 	args: {
 		children: buttonLabel,
 		variant: "primary",
 		emphasis: "bold",
+		size: "lg",
+		disabled: false,
+		leftIcon: PlusIcon(),
+		rightIcon: RightArrowIcon()
+	}
+};
+
+export const SecondaryIconButton: Story = {
+	name: "Secondary Icon Button",
+	args: {
+		children: buttonLabel,
+		variant: "secondary",
+		emphasis: "bold",
+		disabled: false,
 		size: "lg",
 		leftIcon: PlusIcon(),
 		rightIcon: RightArrowIcon()
