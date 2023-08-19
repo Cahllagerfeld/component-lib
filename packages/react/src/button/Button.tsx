@@ -35,13 +35,13 @@ const buttonVariants = cva(
 				emphasis: "subtle",
 				variant: "primary",
 				class:
-					"border border-primary-400 text-primary-600 hover:bg-primary-50 active:bg-primary-100 active:ring-4 active:ring-[#E4D8FD] disabled:border-primary-100 disabled:text-primary-100"
+					"border border-primary-400 text-primary-600 hover:bg-primary-50 active:bg-primary-100 focus:ring-[#E4D8FD] focus:ring-4 disabled:border-primary-100 disabled:text-primary-100"
 			},
 			{
 				emphasis: "minimal",
 				variant: "primary",
 				class:
-					"text-primary-600 hover:bg-primary-50 active:bg-primary-100 active:ring-4 active:ring-[#E4D8FD] disabled:text-primary-100"
+					"text-primary-600 hover:bg-primary-50 active:bg-primary-100 focus:ring-[#E4D8FD] focus:ring-4 disabled:text-primary-100"
 			},
 			// Secondary
 			{
@@ -54,13 +54,13 @@ const buttonVariants = cva(
 				emphasis: "subtle",
 				variant: "secondary",
 				class:
-					"border border-neutral-300 text-neutral-900 hover:bg-neutral-100 active:border-neutral-400 active:bg-neutral-300 active:ring-4 active:ring-neutral-100 disabled:border-neutral-300 disabled:text-neutral-300"
+					"border border-neutral-300 text-neutral-900 hover:bg-neutral-100 active:border-neutral-400 active:bg-neutral-300 focus:ring-4 focus:ring-neutral-100 disabled:border-neutral-300 disabled:text-neutral-300"
 			},
 			{
 				emphasis: "minimal",
 				variant: "secondary",
 				class:
-					"text-primary-900 hover:bg-neutral-200 active:bg-neutral-300 active:ring-4 active:ring-neutral-100 disabled:text-neutral-300"
+					"text-primary-900 hover:bg-neutral-200 active:bg-neutral-300 focus:ring-4 focus:ring-neutral-100 disabled:text-neutral-300"
 			},
 			// Danger
 			{
@@ -73,13 +73,13 @@ const buttonVariants = cva(
 				emphasis: "subtle",
 				variant: "danger",
 				class:
-					"border border-error-600 text-error-700 hover:bg-error-50 active:bg-error-100 active:ring-4 active:ring-error-50 disabled:border-error-100 disabled:text-error-100"
+					"border border-error-600 text-error-700 hover:bg-error-50 active:bg-error-100 focus:ring-4 focus:ring-error-50 disabled:border-error-100 disabled:text-error-100"
 			},
 			{
 				emphasis: "minimal",
 				variant: "danger",
 				class:
-					"text-error-700 hover:bg-error-50 active:bg-error-100 active:ring-4 active:ring-error-50 disabled:text-error-100"
+					"text-error-700 hover:bg-error-50 active:bg-error-100 focus:ring-4 focus:ring-error-50 disabled:text-error-100"
 			}
 		],
 		defaultVariants: {
