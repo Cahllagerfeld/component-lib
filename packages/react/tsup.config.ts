@@ -17,7 +17,6 @@ export default defineConfig({
 	treeshake: true,
 	external: ["react"],
 	format: ["cjs", "esm"],
-	minify: true,
 	dts: true,
 	pure: PURE_CALLS
 });

@@ -6,7 +6,8 @@ const buttonLabel = "Click me";
 
 const meta: Meta<typeof Button> = {
 	title: "Button",
-	component: Button
+	component: Button,
+	tags: ["autodocs"]
 };
 
 export default meta;
