@@ -1,5 +1,5 @@
 import { type VariantProps, cva } from "class-variance-authority";
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, ReactElement } from "react";
 import { cn } from "../lib/classnames";
 import React from "react";
 
@@ -90,17 +90,47 @@ const buttonVariants = cva(
 	}
 );
 
+const iconVariants = cva("w-5 h-5", {
+	variants: {
+		variant: {
+			primary: "stroke-white",
+			secondary: "stroke-theme-text-primary disabled:neutral-100",
+			danger: "stroke-white "
+		}
+	}
+});
+
 type ButtonVariantsProps = VariantProps<typeof buttonVariants>;
 
 interface ButtonVariants
 	extends ButtonHTMLAttributes<HTMLButtonElement>,
 		Omit<ButtonVariantsProps, "variant" | "emphasis">,
-		Required<Pick<ButtonVariantsProps, "variant" | "emphasis">> {}
+		Required<Pick<ButtonVariantsProps, "variant" | "emphasis">> {
+	leftIcon?: ReactElement;
+	rightIcon?: ReactElement;
+}
 
-export function Button({ className, children, variant, emphasis, size, ...rest }: ButtonVariants) {
+export function Button({
+	className,
+	children,
+	variant,
+	emphasis,
+	size,
+	leftIcon,
+	rightIcon,
+	...rest
+}: ButtonVariants) {
+	function prepareIcon(icon: ReactElement) {
+		return React.cloneElement(icon, {
+			className: cn(icon.props.className, iconVariants({ variant }))
+		});
+	}
+
 	return (
 		<button className={cn(buttonVariants({ size, variant, emphasis }), className)} {...rest}>
+			{leftIcon && prepareIcon(leftIcon)}
 			{children}
+			{rightIcon && prepareIcon(rightIcon)}
 		</button>
 	);
 }

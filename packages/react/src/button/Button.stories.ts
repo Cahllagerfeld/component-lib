@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "./Button";
+import { PlusIcon } from "./Plus";
+import { ReactElement } from "react";
+import { RightArrowIcon } from "./RightArrow";
 
 const buttonLabel = "Click me";
 
@@ -109,5 +112,16 @@ export const DangerMinimal: Story = {
 		emphasis: "minimal",
 		size: "lg",
 		disabled: false
+	}
+};
+export const IconButton: Story = {
+	name: "Icon Button",
+	args: {
+		children: buttonLabel,
+		variant: "primary",
+		emphasis: "bold",
+		size: "lg",
+		leftIcon: PlusIcon(),
+		rightIcon: RightArrowIcon()
 	}
 };
