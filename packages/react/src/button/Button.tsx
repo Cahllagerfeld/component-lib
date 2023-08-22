@@ -2,6 +2,7 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { ButtonHTMLAttributes, ReactElement } from "react";
 import { cn } from "../lib/classnames";
 import React from "react";
+import { Slot, Slottable } from "@radix-ui/react-slot";
 
 const buttonVariants = cva(
 	"transition-all group duration-200 flex gap-1 items-center font-semibold disabled:pointer-events-none",
@@ -108,6 +109,7 @@ interface ButtonVariants
 		Required<Pick<ButtonVariantsProps, "variant" | "emphasis">> {
 	leftIcon?: ReactElement;
 	rightIcon?: ReactElement;
+	asChild?: boolean;
 }
 
 export function Button({
@@ -118,6 +120,7 @@ export function Button({
 	size,
 	leftIcon,
 	rightIcon,
+	asChild,
 	...rest
 }: ButtonVariants) {
 	function prepareIcon(icon: ReactElement) {
@@ -126,11 +129,13 @@ export function Button({
 		});
 	}
 
+	const Comp = asChild ? Slot : "button";
+
 	return (
-		<button className={cn(buttonVariants({ size, variant, emphasis }), className)} {...rest}>
+		<Comp className={cn(buttonVariants({ size, variant, emphasis }), className)} {...rest}>
 			{leftIcon && prepareIcon(leftIcon)}
-			{children}
+			<Slottable>{children}</Slottable>
 			{rightIcon && prepareIcon(rightIcon)}
-		</button>
+		</Comp>
 	);
 }
