@@ -8,7 +8,8 @@
 	],
 	"scripts": {
 		"build": "tsup",
-		"dev": "storybook dev -p 6006 -s ./src",
+		"dev": "tsup --watch",
+		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
 	},
 	"dependencies": {
