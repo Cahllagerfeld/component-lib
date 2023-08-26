@@ -1,4 +1,5 @@
 import { defineConfig } from "tsup";
+import svgr from "esbuild-plugin-svgr";
 
 const PURE_CALLS = [
 	"cloneElement",
@@ -18,5 +19,6 @@ export default defineConfig({
 	external: ["react"],
 	format: ["cjs", "esm"],
 	dts: true,
-	pure: PURE_CALLS
+	pure: PURE_CALLS,
+	esbuildPlugins: [svgr({ svgo: false })]
 });

@@ -1,5 +1,12 @@
-/** @type { import('@storybook/react-vite').StorybookConfig } */
-const config = {
+import { StorybookConfig } from "@storybook/react-vite";
+import svgr from "vite-plugin-svgr";
+
+// /** @type { import('@storybook/react-vite').StorybookConfig } */
+const config: StorybookConfig = {
+	viteFinal: async (config) => {
+		config.plugins?.push(svgr({ exportAsDefault: true }));
+		return config;
+	},
 	stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
 	addons: [
 		"@storybook/addon-links",

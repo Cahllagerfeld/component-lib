@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "./Button";
 import { PlusIcon } from "./Plus";
-import { ReactElement } from "react";
 import { RightArrowIcon } from "./RightArrow";
 
 const buttonLabel = "Click me";
@@ -10,6 +9,9 @@ const buttonLabel = "Click me";
 const meta: Meta<typeof Button> = {
 	title: "Button",
 	component: Button,
+	parameters: {
+		layout: "centered"
+	},
 	tags: ["autodocs"]
 };
 
